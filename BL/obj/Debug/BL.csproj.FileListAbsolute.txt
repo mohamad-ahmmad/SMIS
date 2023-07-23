@@ -1,0 +1,9 @@
+C:\Users\USER-M\source\repos\SIMS\BL\bin\Debug\BL.dll
+C:\Users\USER-M\source\repos\SIMS\BL\bin\Debug\BL.pdb
+C:\Users\USER-M\source\repos\SIMS\BL\bin\Debug\Common.dll
+C:\Users\USER-M\source\repos\SIMS\BL\bin\Debug\Common.pdb
+C:\Users\USER-M\source\repos\SIMS\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\USER-M\source\repos\SIMS\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\USER-M\source\repos\SIMS\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\USER-M\source\repos\SIMS\BL\obj\Debug\BL.dll
+C:\Users\USER-M\source\repos\SIMS\BL\obj\Debug\BL.pdb

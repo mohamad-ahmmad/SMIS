@@ -1,0 +1,6 @@
+C:\Users\USER-M\source\repos\SIMS\Common\bin\Debug\Common.dll
+C:\Users\USER-M\source\repos\SIMS\Common\bin\Debug\Common.pdb
+C:\Users\USER-M\source\repos\SIMS\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\USER-M\source\repos\SIMS\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\USER-M\source\repos\SIMS\Common\obj\Debug\Common.dll
+C:\Users\USER-M\source\repos\SIMS\Common\obj\Debug\Common.pdb
