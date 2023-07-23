@@ -27,7 +27,7 @@ namespace BL
         }
         public static List<Product> GetAllProducts()
         {
-            throw new NotImplementedException();   
+            return products.Values.ToList();
         }
         public static Product Search (Product product)
         {
