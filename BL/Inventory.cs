@@ -31,7 +31,7 @@ namespace BL
         }
         public static Product Search (Product product)
         {
-            throw new NotImplementedException();
+            return products.ContainsKey(product.Name) ? products[product.Name] : null;
         }
 
     }
