@@ -86,10 +86,19 @@ namespace BL
             if (searchForProductWithProductName == null)
                 return false;
 
-            searchForProductWithProductName.Price = newProduct.Price;
-            searchForProductWithProductName.Quantity = newProduct.Quantity;
+            searchForProductWithProductName.Price = newProduct == null? 0M: newProduct.Price;
+            searchForProductWithProductName.Quantity = newProduct == null? 0 : newProduct.Quantity;
 
             return true;
+        }
+        /// <summary>
+        /// Remove a product with specified productName.
+        /// </summary>
+        /// <param name="productName"></param>
+        /// <returns>false if the element doesn't show in the inventory, otherwise true.</returns>
+        public static bool DeleteProduct(string productName)
+        {
+           return products.Remove(productName);
         }
 
     }
