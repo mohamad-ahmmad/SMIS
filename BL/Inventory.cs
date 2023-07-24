@@ -77,7 +77,7 @@ namespace BL
         /// <returns>false or true, false if the item doesn't exists or the newProduct exists in the inventory</returns>
         public static bool EditProduct(string productName, Product newProduct)
         {
-            if (products.ContainsKey(newProduct.Name))
+            if (newProduct.Name != productName && products.ContainsKey(newProduct.Name))
                 return false;
 
             Product searchForProductWithProductName = Search(new Product()
