@@ -11,6 +11,12 @@ namespace BL
     {
         static Dictionary<string, Product> products = new Dictionary<string, Product>();
 
+
+        public static void ClearAllProducts()
+        {
+            products.Clear();
+        }
+
         /// <summary>
         /// Add product to the inventory
         /// </summary>
@@ -29,6 +35,12 @@ namespace BL
         {
             return products.Values.ToList();
         }
+
+        /// <summary>
+        /// Return the product object or null if not shown in the inventory.
+        /// </summary>
+        /// <param name="product"></param>
+        /// <returns>Product</returns>
         public static Product Search (Product product)
         {
             return products.ContainsKey(product.Name) ? products[product.Name] : null;
