@@ -74,9 +74,12 @@ namespace BL
         /// </summary>
         /// <param name="productName"></param>
         /// <param name="newProduct"></param>
-        /// <returns>false or true, false if the item doesn't exist in the inventory</returns>
+        /// <returns>false or true, false if the item doesn't exists or the newProduct exists in the inventory</returns>
         public static bool EditProduct(string productName, Product newProduct)
         {
+            if (products.ContainsKey(newProduct.Name))
+                return false;
+
             Product searchForProductWithProductName = Search(new Product()
             {
                 Name = productName,
@@ -86,9 +89,9 @@ namespace BL
             if (searchForProductWithProductName == null)
                 return false;
 
-            searchForProductWithProductName.Price = newProduct == null? 0M: newProduct.Price;
-            searchForProductWithProductName.Quantity = newProduct == null? 0 : newProduct.Quantity;
-
+            products.Remove(productName);
+            products.Add(newProduct.Name, newProduct);
+            
             return true;
         }
         /// <summary>
