@@ -3,12 +3,31 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace LoggerTest
 {
+
+  
     [TestClass]
     public class InventoryTest
     {
+        void SetUpInventory()
+        {
+            Inventory.ClearAllProducts();
+            Inventory.AddProduct(new Product()
+            {
+                Name = "Chips",
+                Price = 14.56M,
+                Quantity = 3
+            });
+            Inventory.AddProduct(new Product()
+            {
+                Name = "Homos",
+                Price = 14.56M,
+                Quantity = 4
+            });
+        }
         [TestMethod]
         public void AddProductTest()
         {
@@ -48,19 +67,7 @@ namespace LoggerTest
         [TestMethod]
         public void GetAllProductTest()
         {
-            Inventory.ClearAllProducts();
-            Inventory.AddProduct(new Product()
-            {
-                Name = "Chips",
-                Price = 14.56M,
-                Quantity = 3
-            });
-            Inventory.AddProduct(new Product()
-            {
-                Name = "Homos",
-                Price = 14.56M,
-                Quantity = 4
-            });
+            SetUpInventory();
 
             var actual = Inventory.GetAllProducts();
             
@@ -89,19 +96,7 @@ namespace LoggerTest
         [TestMethod]
         public void SearchAnExistedProductTest()
         {
-            Inventory.ClearAllProducts();
-            Inventory.AddProduct(new Product()
-            {
-                Name = "Chips",
-                Price = 14.56M,
-                Quantity = 3
-            });
-            Inventory.AddProduct(new Product()
-            {
-                Name = "Homos",
-                Price = 14.56M,
-                Quantity = 4
-            });
+            SetUpInventory();
 
 
             var expected = new Product() 
@@ -122,19 +117,7 @@ namespace LoggerTest
         [TestMethod]
         public void SearchANonExistedProductTest()
         {
-            Inventory.ClearAllProducts();
-            Inventory.AddProduct(new Product()
-            {
-                Name = "Chips",
-                Price = 14.56M,
-                Quantity = 3
-            });
-            Inventory.AddProduct(new Product()
-            {
-                Name = "Homos",
-                Price = 14.56M,
-                Quantity = 4
-            });
+            SetUpInventory();
 
 
             Product expected = null;
@@ -146,6 +129,42 @@ namespace LoggerTest
                 Quantity = 0
             });
             Assert.AreEqual(actual, expected);
+        }
+
+        [TestMethod]
+        public void SearchUsingPriceStrategyTest()
+        {
+            SetUpInventory();
+
+            var actual = Inventory.Search(new Product() 
+            {
+                Name = "",
+                Price = 14.56M,
+                Quantity = 0
+            },
+            new PriceCompareStrategy()
+            );
+            List<Product> actualList= actual.ToList();
+
+            var expected = new List<Product>()
+            {
+            new Product() {
+                Name = "Chips",
+                Price = 14.56M,
+                Quantity = 3
+            },
+            new Product() {
+                Name = "Homos",
+                Price = 14.56M,
+                Quantity = 4
+            }
+            };
+
+            for(int i =0; i < actualList.Count ; i++) 
+            {
+                Assert.IsTrue(actualList[i].Equals(expected[i]));
+            }
+
         }
 
     }
