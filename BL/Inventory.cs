@@ -31,6 +31,11 @@ namespace BL
             products.Add(product.Name, product);
             return true;
         }
+
+        /// <summary>
+        /// Return all the products in the inventory
+        /// </summary>
+        /// <returns>All the products</returns>
         public static List<Product> GetAllProducts()
         {
             return products.Values.ToList();
@@ -44,6 +49,24 @@ namespace BL
         public static Product Search (Product product)
         {
             return products.ContainsKey(product.Name) ? products[product.Name] : null;
+        }
+
+        public static IEnumerable<Product> Search(Product product, params ICompareStrategy[] strategies)
+        {
+            if(strategies == null)
+                return Enumerable.Empty<Product>();
+
+            var ans = new List<Product>();
+            foreach(Product p in  products.Values)
+            {
+                bool found = true;
+                foreach (var strategy in strategies)
+                    found = found && strategy.Compare(p, product);
+
+                if (found)
+                    ans.Add(p);
+            }
+            return ans;
         }
 
     }
