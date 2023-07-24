@@ -53,7 +53,7 @@ namespace BL
 
         public static IEnumerable<Product> Search(Product product, params ICompareStrategy[] strategies)
         {
-            if(strategies == null)
+            if(strategies == null || product == null)
                 return Enumerable.Empty<Product>();
 
             var ans = new List<Product>();
@@ -67,6 +67,29 @@ namespace BL
                     ans.Add(p);
             }
             return ans;
+        }
+
+        /// <summary>
+        /// Give the values of newProduct to an existed product with productName
+        /// </summary>
+        /// <param name="productName"></param>
+        /// <param name="newProduct"></param>
+        /// <returns>false or true, false if the item doesn't exist in the inventory</returns>
+        public static bool EditProduct(string productName, Product newProduct)
+        {
+            Product searchForProductWithProductName = Search(new Product()
+            {
+                Name = productName,
+                Price= 0M,
+                Quantity =0
+            });
+            if (searchForProductWithProductName == null)
+                return false;
+
+            searchForProductWithProductName.Price = newProduct.Price;
+            searchForProductWithProductName.Quantity = newProduct.Quantity;
+
+            return true;
         }
 
     }
