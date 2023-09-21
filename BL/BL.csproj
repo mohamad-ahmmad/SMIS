@@ -42,15 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICompareStrategy.cs" />
-    <Compile Include="Inventory.cs" />
+    <Compile Include="InventoryService.cs" />
     <Compile Include="PriceCompareStrategy.cs" />
-    <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{2fc9ce8d-e670-4200-8a51-2a9f5c97136f}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DA\DA.csproj">
+      <Project>{d73ef8e5-307b-4a85-990c-a29249b993f8}</Project>
+      <Name>DA</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

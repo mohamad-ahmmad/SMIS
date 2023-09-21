@@ -14,14 +14,14 @@ namespace LoggerTest
     {
         void SetUpInventory()
         {
-            Inventory.ClearAllProducts();
-            Inventory.AddProduct(new Product()
+            InventoryService.ClearAllProducts();
+            InventoryService.AddProduct(new Product()
             {
                 Name = "Chips",
                 Price = 14.56M,
                 Quantity = 3
             });
-            Inventory.AddProduct(new Product()
+            InventoryService.AddProduct(new Product()
             {
                 Name = "Homos",
                 Price = 14.56M,
@@ -31,8 +31,8 @@ namespace LoggerTest
         [TestMethod]
         public void AddProductTest()
         {
-           Inventory.ClearAllProducts();
-           var acutal = Inventory.AddProduct(new Product()
+           InventoryService.ClearAllProducts();
+           var acutal = InventoryService.AddProduct(new Product()
             {
                 Name = "Chips",
                 Price = 14.56M,
@@ -46,14 +46,14 @@ namespace LoggerTest
         [TestMethod]
         public void AddAnExistedProductTest()
         {
-            Inventory.ClearAllProducts();
-            Inventory.AddProduct(new Product()
+            InventoryService.ClearAllProducts();
+            InventoryService.AddProduct(new Product()
             {
                 Name = "Homos",
                 Price = 14.56M,
                 Quantity = 3
             });
-            var actual = Inventory.AddProduct(new Product()
+            var actual = InventoryService.AddProduct(new Product()
             {
                 Name = "Homos",
                 Price = 14.56M,
@@ -69,7 +69,7 @@ namespace LoggerTest
         {
             SetUpInventory();
 
-            var actual = Inventory.GetAllProducts();
+            var actual = InventoryService.GetAllProducts();
             
             var expected = new List<Product>()
             {
@@ -106,7 +106,7 @@ namespace LoggerTest
                 Quantity = 4
             };
 
-            var actual = Inventory.Search(new Product()
+            var actual = InventoryService.Search(new Product()
             {
                 Name = "Homos",
                 Price = 0.0M,
@@ -122,7 +122,7 @@ namespace LoggerTest
 
             Product expected = null;
 
-            var actual = Inventory.Search(new Product()
+            var actual = InventoryService.Search(new Product()
             {
                 Name = "Homoss",
                 Price = 0.0M,
@@ -136,7 +136,7 @@ namespace LoggerTest
         {
             SetUpInventory();
 
-            var actual = Inventory.Search(new Product() 
+            var actual = InventoryService.Search(new Product() 
             {
                 Name = "",
                 Price = 14.56M,

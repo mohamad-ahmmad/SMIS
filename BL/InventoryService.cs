@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BL
 {
-    public static class Inventory
+    public class InventoryService
     {
-        static Dictionary<string, Product> products = new Dictionary<string, Product>();
+        public InventoryService(IProductRepository productRepository)
+        {
 
+        }
 
         public static void ClearAllProducts()
         {
@@ -24,7 +23,7 @@ namespace BL
         /// <returns>false or true, false if the product exists in the inventory</returns>
         public static bool AddProduct(Product product)
         {
-            Product res = Search(product);
+            Product res = Search(product.Name);
             if (res != null)
                 return false;
 
@@ -46,9 +45,9 @@ namespace BL
         /// </summary>
         /// <param name="product"></param>
         /// <returns>Product</returns>
-        public static Product Search (Product product)
+        public static Product Search (string name)
         {
-            return products.ContainsKey(product.Name) ? products[product.Name] : null;
+            return products.ContainsKey(name) ? products[name] : null;
         }
 
         public static IEnumerable<Product> Search(Product product, params ICompareStrategy[] strategies)
@@ -80,12 +79,7 @@ namespace BL
             if (newProduct.Name != productName && products.ContainsKey(newProduct.Name))
                 return false;
 
-            Product searchForProductWithProductName = Search(new Product()
-            {
-                Name = productName,
-                Price= 0M,
-                Quantity =0
-            });
+            Product searchForProductWithProductName = Search(productName);
             if (searchForProductWithProductName == null)
                 return false;
 

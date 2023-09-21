@@ -1,7 +1,9 @@
 ﻿using BL;
 using Common;
+using DA;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,9 @@ namespace ConsoleApp
    
     static class Executor
     {
+        //Configuration
+        private static InventoryService _inventoryService = new InventoryService(new DocumentProductRepository("mongodb://localhost:27017"));
+
         public static void Execute(string command)
         {
             string[] args = command.Split(" ");
@@ -35,27 +40,22 @@ namespace ConsoleApp
         public static void SearchWithProductName(string[] args)
         {
             string productName= args[1];
-            Product res = Inventory.Search(new Product()
-            {
-                Name = productName,
-                Price=0,
-                Quantity=0,
-            });
+            Product? res = _inventoryService.Search(productName);
             if (res == null)
                 Console.WriteLine($"There's no product with \"{productName}\" name.");
             else
                 Logger.LogToConsole(res);
         }
         public static void DeleteProduct(string productName) {
-            bool res =Inventory.DeleteProduct(productName);
-            if (res)
+            Product? res =_inventoryService.DeleteProduct(productName);
+            if (res is not null)
                 Console.WriteLine("Deleted Successfully.");
             else
-                Console.WriteLine($"There's no product with the specified \"{productName}\" product.");
+                Console.WriteLine($"There's no product with the specified \"{res.Name}\" product.");
         }
         public static void ViewAllProducts()
         {
-            foreach(Product product in Inventory.GetAllProducts())
+            foreach(Product product in _inventoryService.GetAllProducts())
                 Logger.LogToConsole(product);
         }
         public static void EditProduct(string[] args)
@@ -70,9 +70,9 @@ namespace ConsoleApp
                 Quantity = quantity
             };
             
-            bool res =Inventory.EditProduct(newProductName, p);
+            Product? res =_inventoryService.EditProduct(productToUpdate, p);
 
-            if (res)
+            if (res is not null)
                 Console.WriteLine("Updated Successfully.");
             else
                 Console.WriteLine($"The item with {productToUpdate} name is not in the inventory or the new name is already taken.");
@@ -85,7 +85,7 @@ namespace ConsoleApp
                 Price = decimal.Parse(args[2]),
                 Quantity = int.Parse(args[3])
             };
-            bool res = Inventory.AddProduct(product);
+            bool res = _inventoryService.AddProduct(product);
             if (res)
                 Console.WriteLine("Added Successfully");
             else

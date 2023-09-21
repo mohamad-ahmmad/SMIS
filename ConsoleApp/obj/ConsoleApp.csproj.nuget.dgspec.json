@@ -1,54 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER-M\\source\\repos\\SIMS\\ConsoleApp\\ConsoleApp.csproj": {}
+    "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\ConsoleApp\\ConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER-M\\source\\repos\\SIMS\\BL\\BL.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\USER-M\\source\\repos\\SIMS\\BL\\BL.csproj",
-        "projectName": "BL",
-        "projectPath": "C:\\Users\\USER-M\\source\\repos\\SIMS\\BL\\BL.csproj",
-        "frameworks": {
-          "net472": {
-            "projectReferences": {
-              "C:\\Users\\USER-M\\source\\repos\\SIMS\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\USER-M\\source\\repos\\SIMS\\Common\\Common.csproj"
-              }
-            }
-          }
-        }
-      },
-      "frameworks": {
-        "net472": {}
-      }
-    },
-    "C:\\Users\\USER-M\\source\\repos\\SIMS\\Common\\Common.csproj": {
-      "restore": {
-        "projectUniqueName": "C:\\Users\\USER-M\\source\\repos\\SIMS\\Common\\Common.csproj",
-        "projectName": "Common",
-        "projectPath": "C:\\Users\\USER-M\\source\\repos\\SIMS\\Common\\Common.csproj",
-        "frameworks": {
-          "net472": {
-            "projectReferences": {}
-          }
-        }
-      },
-      "frameworks": {
-        "net472": {}
-      }
-    },
-    "C:\\Users\\USER-M\\source\\repos\\SIMS\\ConsoleApp\\ConsoleApp.csproj": {
+    "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\B_L\\B_L.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER-M\\source\\repos\\SIMS\\ConsoleApp\\ConsoleApp.csproj",
-        "projectName": "ConsoleApp",
-        "projectPath": "C:\\Users\\USER-M\\source\\repos\\SIMS\\ConsoleApp\\ConsoleApp.csproj",
-        "packagesPath": "C:\\Users\\USER-M\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER-M\\source\\repos\\SIMS\\ConsoleApp\\obj\\",
+        "projectUniqueName": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\B_L\\B_L.csproj",
+        "projectName": "B_L",
+        "projectPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\B_L\\B_L.csproj",
+        "packagesPath": "C:\\Users\\Mhammad Ahmad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\B_L\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER-M\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mhammad Ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,11 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\USER-M\\source\\repos\\SIMS\\BL\\BL.csproj": {
-                "projectPath": "C:\\Users\\USER-M\\source\\repos\\SIMS\\BL\\BL.csproj"
-              },
-              "C:\\Users\\USER-M\\source\\repos\\SIMS\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\USER-M\\source\\repos\\SIMS\\Common\\Common.csproj"
+              "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\DA\\DA.csproj": {
+                "projectPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\DA\\DA.csproj"
               }
             }
           }
@@ -96,7 +59,156 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\Common\\Common.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\Common\\Common.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\ConsoleApp\\ConsoleApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\ConsoleApp\\ConsoleApp.csproj",
+        "projectName": "ConsoleApp",
+        "projectPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\ConsoleApp\\ConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\Mhammad Ahmad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\ConsoleApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mhammad Ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\B_L\\B_L.csproj": {
+                "projectPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\B_L\\B_L.csproj"
+              },
+              "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\Common\\Common.csproj"
+              },
+              "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\DA\\DA.csproj": {
+                "projectPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\DA\\DA.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\DA\\DA.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\DA\\DA.csproj",
+        "projectName": "DA",
+        "projectPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\DA\\DA.csproj",
+        "packagesPath": "C:\\Users\\Mhammad Ahmad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\DA\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mhammad Ahmad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Mhammad Ahmad\\Desktop\\Training\\Backend\\Database\\SMIS\\Common\\Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.21.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -57,10 +57,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BL\BL.csproj">
-      <Project>{d6f02db7-134c-43c8-8c81-231857bf0f6e}</Project>
-      <Name>BL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Common\Common.csproj">
       <Project>{2fc9ce8d-e670-4200-8a51-2a9f5c97136f}</Project>
       <Name>Common</Name>
